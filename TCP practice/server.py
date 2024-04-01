@@ -8,7 +8,7 @@ HEADER_LENGTH = 15
 IP = "127.0.0.1"
 PORT = 2345
 
-with open("settings.json", 'r') as file:
+with open('settings.json', 'r') as file:
     SETTINGS = json.load(file)
 
 server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
