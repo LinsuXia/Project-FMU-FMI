@@ -18,7 +18,8 @@ client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((IP, SERVER_PORT))
 client_socket.setblocking(False)
 nodeName = pickle.dumps({
-            "data": NODENAME
+            "data": NODENAME,
+            "beginPort": OUTPUT_PORT1
         })
 
 username_header = f"{len(nodeName):<{HEADER_LENGTH}}".encode("utf-8")
